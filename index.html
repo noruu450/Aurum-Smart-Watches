@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aurum Paragon Smartwatches</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #121212;
+            color: #fff;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: #000;
+            z-index: 1000;
+            padding: 20px 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            display: flex;
+            justify-content: center; /* Center content if you had anything */
+            align-items: center;
+            height: 80px; /* Adjust header height */
+        }
+
+        nav {
+            position: absolute;
+            right: 20px; /* Keep nav items on the right */
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: flex-end;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 30px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            text-transform: uppercase;
+            transition: 0.3s ease-in-out;
+        }
+
+        nav ul li a:hover {
+            color: #ff6f61;
+        }
+
+        .hero {
+            height: 100vh; /* Full screen height */
+            background-size: cover; /* Cover the screen */
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 20px;
+            background-image: url('climax.jpg'); /* Hero image */
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        .hero button {
+            background-color: #ff6f61;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            font-size: 18px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: 0.3s ease-in-out;
+        }
+
+        .hero button:hover {
+            background-color: #e14f3d;
+        }
+
+        .section {
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .about, .contact {
+            background-color: #1f1f1f;
+        }
+
+        .about img {
+            width: 800px;
+            margin-top: 30px;
+            border-radius: 10px;
+        }
+
+        .products {
+            background-color: #292929;
+        }
+
+        .product-list {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .product-item {
+            background-color: #333;
+            padding: 20px;
+            border-radius: 15px;
+            width: 280px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .product-item img {
+            width: 250px; /* Smaller product image size */
+            height: auto;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .product-item img:hover {
+            transform: scale(1.05);
+        }
+
+        .product-item h3 {
+            margin-top: 15px;
+            font-size: 1.5rem;
+            color: #ff6f61;
+        }
+
+        .product-item p {
+            color: #ddd;
+            margin-top: 10px;
+        }
+
+        .product-item button {
+            background-color: #ff6f61;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 10px;
+            transition: 0.3s ease-in-out;
+        }
+
+        .product-item button:hover {
+            background-color: #e14f3d;
+        }
+
+        .contact form {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #1f1f1f;
+            padding: 30px;
+            border-radius: 10px;
+        }
+
+        .contact input, .contact textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #333;
+            border-radius: 5px;
+            background-color: #292929;
+            color: #fff;
+        }
+
+        .contact button {
+            background-color: #ff6f61;
+            color: #fff;
+            padding: 12px 20px;
+            border: none;
+            font-size: 18px;
+            cursor: pointer;
+            border-radius: 5px;
+            width: 100%;
+        }
+
+        .contact button:hover {
+            background-color: #e14f3d;
+        }
+
+        footer {
+            background-color: #000;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <!-- Logo Removed -->
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Home Section -->
+    <section class="hero" id="home">
+        <h1>Welcome to Aurum Paragon</h1>
+        <p>Where Technology Meets Elegance</p>
+        <button onclick="location.href='#products'">Shop Now</button>
+    </section>
+
+    <!-- About Section -->
+    <section class="section about" id="about">
+        <h2>About Aurum Paragon</h2>
+        <p>We combine luxury and cutting-edge technology to create the finest smartwatches that enhance your lifestyle.</p>
+        <img src="skin.jpeg" alt="Aurum Paragon Technology" width="1000px"> <!-- Recommended width -->
+    </section>
+
+    <!-- Products Section -->
+    <section class="section products" id="products">
+        <h2>Our Smartwatches</h2>
+        <div class="product-list">
+            <div class="product-item">
+                <img src="aurum Watch.jpeg" alt="Aurum Pixel Watch" width="250px"> <!-- Smaller size -->
+                <h3>Aurum Pixel Watch</h3>
+                <p>Explore elegance and innovation with the Aurum Pixel Watch featuring a stunning display and premium design.</p>
+                <p>Price: PKR 5000</p>
+                <button onclick="addToCart('Aurum Pixel Watch', 5000)">Add to Cart</button>
+            </div>
+            <div class="product-item">
+                <img src="smart watch web.jpeg" alt="Aurum Watch Series 4" width="250px"> <!-- Smaller size -->
+                <h3>Aurum Watch Series 4</h3>
+                <p>Premium performance and design in the Aurum Series 4 ideal for those seeking luxury and high-tech features.</p>
+                <p>Price: PKR 6000</p>
+                <button onclick="addToCart('Aurum Watch Series 4', 6000)">Add to Cart</button>
+            </div>
+            <div class="product-item">
+                <img src="aurum watch.jpg" alt="Aurum Health Tracker" width="250px"> <!-- Smaller size -->
+                <h3>Aurum Health Tracker</h3>
+                <p>Designed for fitness enthusiasts, this health tracker offers everything you need to track your health and sleep.</p>
+                <p>Price: PKR 4000</p>
+                <button onclick="addToCart('Aurum Health Tracker', 4000)">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact" id="contact">
+        <h2>Contact Us</h2>
+        <form id="contact-form" action="#">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Aurum Paragon. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        // Add to cart function (for simplicity)
+        function addToCart(product, price) {
+            alert(`${product} has been added to your cart for PKR ${price}`);
+        }
+    </script>
+</body>
+</html>
